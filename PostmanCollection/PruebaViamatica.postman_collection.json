@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "742acb0e-c2a2-4604-b5e3-2a598951810e",
+		"name": "PruebaViamatica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40851698"
+	},
+	"item": [
+		{
+			"name": "Prueba registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombres\": \"Adolfo\",\r\n  \"Apellidos\": \"Carrion\",\r\n  \"Identificacion\": \"2656890471\",\r\n  \"FechaNacimiento\": \"1985-12-01\",\r\n  \"UseName\": \"Adolfocarrion123\",\r\n  \"Password\": \"Password5!\",\r\n  \"RolId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7231/api/Persona",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7231",
+					"path": [
+						"api",
+						"Persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PruebaLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"useName\": \"jperez@mail.com\",\r\n    \"password\" : \"Password1!\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7231/api/Session/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7231",
+					"path": [
+						"api",
+						"Session",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PruebaLogout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuariosIdUsuario\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7231/api/Session/logout",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7231",
+					"path": [
+						"api",
+						"Session",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
